@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea de Tiempo de HTML</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; text-align: center; }
+        .timeline { display: flex; flex-direction: column; align-items: center; }
+        .event { margin: 10px; padding: 15px; border: 1px solid #ccc; border-radius: 8px; width: 80%; max-width: 500px; cursor: pointer; transition: background 0.2s; }
+        .event:hover { background: #f0f0f0; }
+        .details { display: none; margin-top: 10px; font-size: 0.9em; color: #555; }
+    </style>
+</head>
+<body>
+    <h1>Evolución de HTML</h1>
+    <div class="timeline">
+        <div class="event" onclick="toggleDetails('html1')">
+            <strong>HTML 1.0 (1993)</strong>
+            <div id="html1" class="details">Primera versión, muy básica, creada por Tim Berners-Lee.</div>
+        </div>
+        <div class="event" onclick="toggleDetails('html2')">
+            <strong>HTML 2.0 (1995)</strong>
+            <div id="html2" class="details">Se estandariza y añade soporte para formularios y tablas.</div>
+        </div>
+        <div class="event" onclick="toggleDetails('html4')">
+            <strong>HTML 4.01 (1999)</strong>
+            <div id="html4" class="details">Introduce soporte para scripts y mejor manejo de estilos.</div>
+        </div>
+        <div class="event" onclick="toggleDetails('xhtml')">
+            <strong>XHTML (2000)</strong>
+            <div id="xhtml" class="details">Versión más estricta que exige un código bien formado.</div>
+        </div>
+        <div class="event" onclick="toggleDetails('html5')">
+            <strong>HTML5 (2014)</strong>
+            <div id="html5" class="details">Incorpora elementos multimedia y APIs para una web más dinámica.</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
